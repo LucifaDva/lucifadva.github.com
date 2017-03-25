@@ -1,4 +1,4 @@
-# Hux blog 模板
+# Sangasong blog 模板
 
 ### [我的博客在这里 &rarr;](http://sangasong.github.com/)
 
