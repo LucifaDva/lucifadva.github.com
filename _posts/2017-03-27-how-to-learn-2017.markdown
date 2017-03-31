@@ -3,7 +3,7 @@ layout:     post
 title:      "「学习」在工作中个人成长方法"
 subtitle:   "聊聊再工作中成长"
 date:       2017-03-27 12:00:00
-author:     "Sangasong"
+author:     "Lucifadiva"
 header-img: "img/post-bg-apple-event-2015.jpg"
 tags:
     - Learn
