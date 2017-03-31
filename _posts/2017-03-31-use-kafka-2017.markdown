@@ -1,0 +1,24 @@
+---
+layout:     post
+title:      "「技术」Kafka使用浅谈"
+subtitle:   "Something about using Kafka with go and php"
+date:       2017-03-31 21:00:00
+author:     "Lucifa Diva"
+header-img: "img/post-bg-apple-event-2015.jpg"
+tags:
+    - 程序媛
+    - 小能手
+---
+
+
+<div>
+    <blockquote>先挖个坑。。</blockquote>
+    <br>最近由于各种需求密集使用Kafka，同时在使用中遇到了各类问题，由简单的使用，被迫研究各种用法。
+    <br> 一、Why Kafka
+    <br>    http://kafka.apache.org/documentation 首先与传统消息系统比，Kafka具有高吞吐、冗余备份、高容错性的特点，特别适用于大量的消息处理应用，同时Kafka自身设计理念就是分布式，水平扩展容易并且性能不变，写采用append方式几乎与内存效率等同，这个后边介绍，并且由于是写文件方式存储消息，持久化没有问题，因此对于量大的消息，或者不允许丢失的消息应用（主要是rabbitmq、redis、memcached等主要基于内存，进程崩溃消息基本丢失），用Kafka比较合适。
+    <p>
+    <b></b>
+    </p>
+</div>
+
+
