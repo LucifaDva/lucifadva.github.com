@@ -6,8 +6,7 @@ date:       2017-03-31 21:00:00
 author:     "Lucifa Diva"
 header-img: "img/post-bg-apple-event-2015.jpg"
 tags:
-    - 程序媛
-    - 小能手
+    - 技术
 ---
 
 
