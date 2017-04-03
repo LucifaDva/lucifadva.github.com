@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "「技术」Kafka使用浅谈"
+title:     「技术」Kafka使用浅谈
 subtitle:   "Something about using Kafka with go and php"
 date:       2017-03-31 21:00:00
 author:     "Lucifa Diva"
