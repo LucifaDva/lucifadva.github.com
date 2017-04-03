@@ -1,0 +1,23 @@
+---
+layout:     post
+title:      "「技术」Kafka使用浅谈"
+subtitle:   "Something about using Kafka with go and php"
+date:       2017-03-31 21:00:00
+author:     "Lucifa Dva"
+header-img: "img/post-bg-apple-event-2015.jpg"
+tags:
+    - 职业规划
+---
+
+
+<div>
+    <br>做技术有时会面临是否跳槽的抉择，正如很多前辈建议的那样，不要因为【现在很差】而跳槽，要因为【未来很好】而跳槽，只有这样才能保证你一直往上走。并且时间
+    <br> 
+    <br> 
+    <br> 
+    <p>
+    <b></b>
+    </p>
+</div>
+
+
