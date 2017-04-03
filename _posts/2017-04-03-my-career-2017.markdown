@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:"「职业规划」技术如何规划自己职业生涯"
+title:   "「职业规划」技术如何规划自己职业生涯"
 subtitle:   "career"
 date:       2017-03-31 21:00:00
 author:     "Lucifa Dva"
