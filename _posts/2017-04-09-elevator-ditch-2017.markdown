@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      "「学习」摆脱电梯传说"
@@ -11,7 +10,7 @@ tags:
 ---
 
 
-
+> https://m.signalvnoise.com/ditch-the-elevator-pitch-c4e39b18197c
 
 <div>
       <p>如果真有兴趣，没有必要仓促行事，慢慢来，先听然后再解释。<\p>
