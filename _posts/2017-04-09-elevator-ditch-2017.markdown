@@ -10,7 +10,7 @@ tags:
     - Learn
 ---
 
->https://m.signalvnoise.com/ditch-the-elevator-pitch-c4e39b18197c
+
 
 
 <div>
