@@ -39,7 +39,8 @@ Array
     [7] => getReturn
     [8] => __wakeup
 )
-其中key就是
+如果范围设的很大，range()方法就会出错：PHP Warning:  range(): The supplied range exceeds the maximum array size: start=1 end=1000000000000
+而xrange()方法的优点是显而易见的.它可以让你在处理大数据集合的时候不用一次性的加载到内存中.甚至你可以处理无限大的数据流。
 
 </div>
 
