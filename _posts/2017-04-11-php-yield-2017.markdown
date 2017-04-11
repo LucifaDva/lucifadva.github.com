@@ -27,18 +27,18 @@ tags:
 <p>}</p>
 
 <p>range(1,10)返回的是一个array(1,2,…,10)的数组，xrange(1,10)依次返回这些值的迭代器，直接打印xrange发现返回的是object(Generator)#1 (0) {}，这个类就是生成迭代器，而这个迭代器实现了Iterator接口，试着打印了一下类的方法：</p>
-<p>Array</p>
-<p>(</p>
-<p>    [0] => rewind</p>
-<p>    [1] => valid</p>
-<p>    [2] => current</p>
-<p>    [3] => key</p>
-<p>    [4] => next</p>
-<p>    [5] => send</p>
-<p>    [6] => throw</p>
-<p>    [7] => getReturn</p>
-<p>    [8] => __wakeup</p>
-<p>)</p>
+<pre>Array
+(
+    [0] => rewind
+    [1] => valid
+    [2] => current
+    [3] => key
+    [4] => next
+    [5] => send
+    [6] => throw
+    [7] => getReturn
+    [8] => __wakeup
+)</pre>
 <p>如果范围设的很大，range()方法就会出错：PHP Warning:  range(): The supplied range exceeds the maximum array size: start=1 end=1000000000000</p>
 <p>而xrange()方法的优点是显而易见的.它可以让你在处理大数据集合的时候不用一次性的加载到内存中.甚至你可以处理无限大的数据流。</p>
 调用迭代器的方法一次, 其中的代码运行一次.例如, 如果你调用$range->rewind(), 那么xrange()里的代码就会运行到控制流第一次出现yield的地方. 而函数内传递给yield语句的返回值可以通过$range->current()获取.</p>
