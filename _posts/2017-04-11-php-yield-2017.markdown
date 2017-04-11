@@ -15,18 +15,18 @@ tags:
 <div>
 <h3>一、yield基础——迭代器</h3>
 <p>经典例子：</p>
-<p>
+<div>
 <pre><?php
 function xrange($start, $end, $step = 1) {
    for ($i = $start; $i <= $end; $i += $step) {
      yield $i;
    }
 }
-
 foreach (xrange(1, 1000000) as $num) {
     echo $num, "\n";
 }</pre>
-</p>
+</div>
+
 <p>range(1,10)返回的是一个array(1,2,…,10)的数组，xrange(1,10)依次返回这些值的迭代器，直接打印xrange发现返回的是object(Generator)#1 (0) {}，这个类就是生成迭代器，而这个迭代器实现了Iterator接口，试着打印了一下类的方法：</p>
 <pre>Array
 (
@@ -57,7 +57,6 @@ function gen() {
     $ret = (yield 'yield2');
     var_dump($ret);
 }
-
 $gen = gen();
 var_dump($gen->current());    // string(6) "yield1"
 var_dump($gen->send('ret1')); // string(4) "ret1"   (the first var_dump in gen)
