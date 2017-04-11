@@ -1,0 +1,48 @@
+---
+layout:     post
+title:      "「PHP」迭代生成器"
+subtitle:   "探索yelid"
+date:       2017-04-11 12:00:00
+author:     "Lucifadiva"
+header-img: "img/post-bg-apple-event-2015.jpg"
+tags:
+    - Learn
+---
+
+> 
+
+
+<div>
+  
+<p>经典例子：</p>
+<?php
+function xrange($start, $end, $step = 1) {
+    for ($i = $start; $i <= $end; $i += $step) {
+        yield $i;
+    }
+}
+ 
+foreach (xrange(1, 1000000) as $num) {
+    echo $num, "\n";
+}
+
+range(1,10)返回的是一个array(1,2,…,10)的数组，xrange(1,10)依次返回这些值的迭代器，直接打印xrange发现返回的是object(Generator)#1 (0) {}，这个类就是生成迭代器，试着打印了一下类的方法：
+Array
+(
+    [0] => rewind
+    [1] => valid
+    [2] => current
+    [3] => key
+    [4] => next
+    [5] => send
+    [6] => throw
+    [7] => getReturn
+    [8] => __wakeup
+)
+其中key就是
+
+</div>
+
+
+
+
