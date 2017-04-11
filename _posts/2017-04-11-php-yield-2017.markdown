@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "「PHP」迭代生成器"
+title:      "「PHP」迭代生成器与协程"
 subtitle:   "探索yelid"
 date:       2017-04-11 12:00:00
 author:     "Lucifadiva"
@@ -41,7 +41,11 @@ tags:
 <p>)</p>
 <p>如果范围设的很大，range()方法就会出错：PHP Warning:  range(): The supplied range exceeds the maximum array size: start=1 end=1000000000000</p>
 <p>而xrange()方法的优点是显而易见的.它可以让你在处理大数据集合的时候不用一次性的加载到内存中.甚至你可以处理无限大的数据流。</p>
+调用迭代器的方法一次, 其中的代码运行一次.例如, 如果你调用$range->rewind(), 那么xrange()里的代码就会运行到控制流第一次出现yield的地方. 而函数内传递给yield语句的返回值可以通过$range->current()获取.</p>
 
+<p>为了继续执行生成器中yield后的代码, 你就需要调用$range->next()方法. 这将再次启动生成器, 直到下一次yield语句出现. 因此,连续调用next()和current()方法, 你就能从生成器里获得所有的值, 直到再没有yield语句出现.</p>
+
+<p>对xrange()来说, 这种情形出现在$i超过$end时. 在这中情况下, 控制流将到达函数的终点,因此将不执行任何代码.一旦这种情况发生,vaild()方法将返回假, 这时迭代结束.</p>
 </div>
 
 
