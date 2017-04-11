@@ -15,9 +15,9 @@ tags:
 <div>
 <h3>一、yield基础——迭代器</h3>
 <p>经典例子：</p>
-<pre><?php
+<pre>
 function xrange($start, $end, $step = 1) {
-   for ($i = $start; $i <= $end; $i += $step) {
+   for ($i = $start; $i &lt;= $end; $i += $step) {
      yield $i;
    }
 }
@@ -47,7 +47,7 @@ foreach (xrange(1, 1000000) as $num) {
 <p>对xrange()来说, 这种情形出现在$i超过$end时. 在这中情况下, 控制流将到达函数的终点,因此将不执行任何代码.一旦这种情况发生,vaild()方法将返回假, 这时迭代结束.</p>
 <h3>二、协程——send</h3>
 <p>经典例子——双向：</p>
-<pre><?php
+<pre>
 function gen() {
     $ret = (yield 'yield1');
     var_dump($ret);
