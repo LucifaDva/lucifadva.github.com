@@ -7,7 +7,6 @@ author:     "Lucifadiva"
 header-img: "img/post-bg-apple-event-2015.jpg"
 tags:
     - Learn
-    - 广告
     
 ---
 
