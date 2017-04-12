@@ -6,7 +6,7 @@ date:       2017-03-31 21:00:00
 author:     "Lucifa Diva"
 header-img: "img/post-bg-apple-event-2015.jpg"
 tags:
-    -技术
+    - 技术
 ---
 
 
