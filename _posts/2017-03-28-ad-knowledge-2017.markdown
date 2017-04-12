@@ -1,14 +1,13 @@
 ---
 layout:     post
-title:     「学习」广告知识点
-subtitle:   "积累整理"
-date:       2017-03-28 21:00:00
+title:     「技术」Kafka使用浅谈
+subtitle:   "Something about using Kafka with go and php"
+date:       2017-03-31 21:00:00
 author:     "Lucifa Diva"
 header-img: "img/post-bg-apple-event-2015.jpg"
 tags:
-    - 广告
+    - 技术
 ---
-
 
 
 
