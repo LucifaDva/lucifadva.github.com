@@ -3,13 +3,12 @@ layout:     post
 title:      "「学习」广告知识点"
 subtitle:   "积累整理"
 date:       2017-03-28 12:00:00
-author:     "Lucifa Dva"
+author:     "Lucifa Dva"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - 广告
+    - 生活
 ---
-
 
 
 
