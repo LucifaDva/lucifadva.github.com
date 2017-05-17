@@ -1,0 +1,40 @@
+---
+layout:     post
+title:     「技术」关于coredump
+subtitle:   "gdb调试"
+date:       2017-04-19 21:00:00
+author:     "Lucifa Diva"
+header-img: "img/post-bg-apple-event-2015.jpg"
+tags:
+    - 技术
+---
+
+<pre>
+1.coredump
+程序由于各种异常、bug导致运行中异常退出或终止，并且满足一定条件下，会产生一个叫做core的文件。
+core通常包括程序运行时的内存、寄存器状态、堆栈指针，内存管理信息还有各种函数调用堆栈信息等，可以理解为程序工作当前状态生成的第一个文件，通过分析这个文件，可以定位到程序异常退出时的堆栈调用等信息，找出崩溃点。
+	
+2. coredump文件存储位置
+core默认存储位置与对应可执行程序再统一目录下，文件名core，可通过命令cat /proc/sys/kernel/core_pattern查看core文件位置。如果多个程序产生core文件，或者同一个程序多次崩溃，就会覆盖同一个core文件，因此必要时，要对不同程序生成的core分别命名。
+echo “/data/coredump/core.%e.%p” > /proc/sys/kernel/core_pattern 
+产生的core文件中将带有崩溃的程序名，进程ID，如果/proc/sys/kernel/core_uses_pid为1，即使没有%p，最后coredump文件名也加入进程ID。
+
+3.读取coredump文件
+判断一个文件是否为core文件，命令readelf -h core，看Type行，是否是CORE (Core file)
+或命令file core：看是否又core file
+
+4.一些产生条件
+（1）当前会话：limit -c如果=0，不会产生coredump，需要修改，ulimit -c unlimited（可以产生coredump且不受大小限制）
+         或指定coredump文件大小ulimit -c SIZE(blocks = 512bytes)
+（2）当前用户，执行对应程序的用户，有对 写入core目录的写权限，并且空间足够。
+（3）不会产生：
+	通过set-user-ID,set-group-ID，当前用户不是进程owner
+ 	用户对目录没有写权限，file太大
+5.产生原因
+（1）内存访问越界
+（2）线程不安全、读写数据未加锁
+（3）非法指针
+（4）堆栈溢出，比如大量局部变量
+
+</pre>
+  
